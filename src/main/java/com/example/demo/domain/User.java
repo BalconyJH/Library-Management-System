@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 //需要把对象通过网络进行传播的时候，需要使用序列化
 public class User implements Serializable {
-
     private Integer id;       //用户id
     private String name;      //用户名称
     private String password;  //用户密码

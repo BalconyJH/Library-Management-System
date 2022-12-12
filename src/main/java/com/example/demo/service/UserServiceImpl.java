@@ -8,8 +8,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
     //注入userMapper
-    @Autowired
-    private UserMapper userMapper;
+    private final UserMapper userMapper;
+
+    public UserServiceImpl(UserMapper userMapper) {
+        this.userMapper = userMapper;
+    }
+
     //通过User的用户账号和用户密码查询用户信息
     @Override
     public User login(User user) {
